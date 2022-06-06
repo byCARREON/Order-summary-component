@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 25px;
+    margin-inline: auto;
+}
+
+.card-img {
+    background-image: url(images/illustration-hero.svg);
+    background-position: center;
+    height: 220px;
+    border-radius: 25px 25px 0 0;
+}
+
+.card h1{font-size: 26px;}
+
+.card h1, span {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.card p {
+    color: var(--Desaturated-blue);
+}
+
+.order-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--Very-pale-blue);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.order-plan .plan {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link {
+    font-size: 14px;
+}
+
+.link--2 {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.link--2:hover {
+    color: var(--Dark-blue);
+}
+
+.card .info {
+    padding: 25px;
+}
+
+.info .summary p {
+    margin: 20px 15px 25px 15px;
+    letter-spacing: 0.3px;
+}
+
+button {
+    font-family: 'Red Hat Display', sans-serif;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin: 25px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 19px 38px, rgba(0, 0, 0, 0.1) 0px 15px 12px;
+    transition: all 0.3s ease;
+}
+
+button:hover, .link:hover {
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 50em) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+}
